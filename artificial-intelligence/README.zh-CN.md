@@ -4,7 +4,7 @@
 
 ## 理论基础
 
-## 库
+## 存储库
 
 - [tensorflow.js](https://github.com/tensorflow/tfjs)
 - [brain.js](https://github.com/BrainJS/brain.js/)
