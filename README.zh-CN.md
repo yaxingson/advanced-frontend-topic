@@ -6,7 +6,7 @@
 
 ### [人工智能](./artificial-intelligence/README.zh-CN.md)
 
-### [编辑器](./editor/README,zh-CN.md)
+### [编辑器](./editor/README.zh-CN.md)
 
 ### [多媒体开发](./multimedia-development/README.zh-CN.md)
 
