@@ -36,6 +36,11 @@
 - Embedding大模型
 - 审查大模型
 
+> 推理模型和通用模型
+
+
+
+
 ## 库
 
 - [pytorch](https://github.com/pytorch/pytorch)
@@ -68,7 +73,7 @@
 
 > Prompt: 一个输入的文本段落或短语，作为生成模型输出的起点或引导
 
-Prompt提示词技巧:
+Prompt提示语技巧:
 
 - 角色扮演
 - 少量示例
