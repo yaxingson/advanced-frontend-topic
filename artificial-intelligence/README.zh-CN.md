@@ -38,6 +38,7 @@
 
 > 推理模型和通用模型
 
+**AI幻觉**
 
 
 
@@ -81,10 +82,14 @@ Prompt提示语技巧:
 - 外部工具
 - 输出提示
 
+> 提示语框架: TASTE、ALIGN、RTGO和COSTAR
+
+<https://api-docs.deepseek.com/zh-cn/prompt-library/>
+
 
 ### 超级个体
 
-### 数字人
+### 数字虚拟人
 
 
 
