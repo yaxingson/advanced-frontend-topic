@@ -44,6 +44,9 @@
 
 **AI幻觉**
 
+常见的AI需求: 决策需求、分析需求、创造性需求、验证性需求和执行需求
+
+
 ## 库
 
 - [pytorch](https://github.com/pytorch/pytorch)
@@ -84,7 +87,11 @@ Prompt提示语技巧:
 - 外部工具
 - 输出提示
 
-> 提示语框架: TASTE、ALIGN、RTGO和COSTAR
+提示语框架: TASTE、ALIGN、RTGO和COSTAR
+
+提示语的基本结构包括指令、上下文和期望
+
+> 提示语链
 
 <https://api-docs.deepseek.com/zh-cn/prompt-library/>
 
