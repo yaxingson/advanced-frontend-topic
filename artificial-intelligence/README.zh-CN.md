@@ -87,7 +87,7 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 
 私有部署蒸馏版本的Deepseek模型
 
-
+通用模型微调
 
 
 ### 发展阶段
