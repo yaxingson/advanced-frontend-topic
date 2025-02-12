@@ -79,11 +79,16 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 - Embedding大模型
 - 审查大模型
 
-> 推理模型和通用模型
+> 推理模型和指令模型
 
 **AI幻觉**
 
 常见的AI需求: 决策需求、分析需求、创造性需求、验证性需求和执行需求
+
+私有部署蒸馏版本的Deepseek模型
+
+
+
 
 ### 发展阶段
 
@@ -138,6 +143,10 @@ Prompt提示语技巧:
 > 提示语链
 
 <https://api-docs.deepseek.com/zh-cn/prompt-library/>
+
+<https://kimi.moonshot.cn/>
+
+> 乔哈里视窗
 
 
 ### 超级个体
