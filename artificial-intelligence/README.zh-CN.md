@@ -79,7 +79,8 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 - Embedding大模型
 - 审查大模型
 
-> 推理模型和指令模型
+> 指令模型和推理模型
+
 
 **AI幻觉**
 
@@ -87,6 +88,7 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 
 私有部署蒸馏版本的Deepseek模型
 
+- <https://ollama.com/>
 
 通用模型微调
 
@@ -165,5 +167,6 @@ Prompt提示语技巧:
 
 <https://hugging-face.cn/>
 <https://www.langchain.com/langsmith>
-
+<https://metaso.cn/>
+<https://siliconflow.cn/>
 
