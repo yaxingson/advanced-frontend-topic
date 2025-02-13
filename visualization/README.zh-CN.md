@@ -75,6 +75,8 @@
 
 ### WebGL
 
+### WebGPU
+
 ## 库
 
 - [echarts](https://github.com/apache/echarts)
