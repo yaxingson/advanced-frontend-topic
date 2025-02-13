@@ -96,6 +96,11 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 2. Agent
 3. Rag
 
+### 关键技术
+
+#### WebNN
+
+
 ## 库
 
 - [pytorch](https://github.com/pytorch/pytorch)
@@ -152,6 +157,10 @@ Prompt提示语技巧:
 ### 超级个体
 
 ### 数字虚拟人
+
+## 资源
+
+<https://hugging-face.cn/>
 
 
 
