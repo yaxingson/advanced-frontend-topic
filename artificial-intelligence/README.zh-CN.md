@@ -87,6 +87,7 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 
 私有部署蒸馏版本的Deepseek模型
 
+
 通用模型微调
 
 
@@ -111,6 +112,8 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 - [ml5](https://github.com/ml5js/ml5-library)
 - [convnetjs](https://github.com/karpathy/convnetjs)
 - [xyflow](https://github.com/xyflow/xyflow)
+- [langchain](https://github.com/langchain-ai/langchain)
+
 
 ## 样例
 
@@ -161,7 +164,6 @@ Prompt提示语技巧:
 ## 资源
 
 <https://hugging-face.cn/>
-
-
+<https://www.langchain.com/langsmith>
 
 
