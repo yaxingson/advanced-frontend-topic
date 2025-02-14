@@ -57,6 +57,20 @@
 
 ### 图形学
 
+#### 色彩
+
+光学三原色： 红（R）、绿（G）和蓝（B）
+颜料三原色： 青（C）、品红（M）和黄（Y）
+
+> 反色
+
+颜色的表示:
+
+- 十六进制
+- 颜色名称
+- `rgb`和`rgba`
+- `hsl`和`hsla`
+
 ### 人机交互
 
 ### 数据分析和挖掘
@@ -65,15 +79,22 @@
 
 ### 3D引擎
 
-<https://www.opengl.org/>
-
 ## 关键技术
 
 ### HTML5 Canvas
 
+画布
+
 ### SVG
 
 ### WebGL
+
+<https://www.opengl.org/>
+
+着色器语言： `GLSL ES`
+
+- 顶点着色器（Vertex Shader）
+- 片元着色器（Fragment Shader）
 
 ### WebGPU
 
