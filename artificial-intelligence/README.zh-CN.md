@@ -115,7 +115,7 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 - [convnetjs](https://github.com/karpathy/convnetjs)
 - [xyflow](https://github.com/xyflow/xyflow)
 - [langchain](https://github.com/langchain-ai/langchain)
-
+- [@xenova/transformers]()
 
 ## 样例
 
