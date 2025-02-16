@@ -81,7 +81,6 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 
 > 指令模型和推理模型
 
-
 **AI幻觉**
 
 常见的AI需求: 决策需求、分析需求、创造性需求、验证性需求和执行需求
@@ -89,6 +88,7 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 私有部署蒸馏版本的Deepseek模型
 
 - <https://ollama.com/>
+- <https://dify.ai/>
 
 通用模型微调
 
@@ -97,7 +97,7 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 
 1. Prompt
 2. Agent
-3. Rag
+3. RAG
 
 ### 关键技术
 
@@ -117,6 +117,9 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 - [langchain](https://github.com/langchain-ai/langchain)
 - [@xenova/transformers]()
 - [@pinecone-database/pinecone](https://github.com/pinecone-io/pinecone-ts-client)
+- [ollama](https://github.com/ollama/ollama)
+- [dify](https://github.com/langgenius/dify)
+
 
 
 ## 样例
@@ -136,6 +139,8 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 - <https://github.com/langgenius/dify>
 - <https://github.com/Mintplex-Labs/anything-llm>
 
+
+
 ### Prompt工程应用
 
 > Prompt: 一个输入的文本段落或短语，作为生成模型输出的起点或引导
@@ -143,14 +148,23 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 Prompt提示语技巧:
 
 - 角色扮演
-- 少量示例
-- 思维链
+- 零样本（Zero-shot）、单样本（One-shot）和少量样本（Few-shot）
+- 思维链（COT）和思维树（TOT）
 - 外部工具
 - 输出提示
 
 提示语框架: TASTE、ALIGN、RTGO和COSTAR
 
-提示语的基本结构包括指令、上下文和期望
+提示语的基本结构包括
+
+- 指令
+- 上下文
+- 期望（包括输入数据和输出提示）
+
+```txt
+> let's think step by step.
+
+```
 
 > 提示语链
 
