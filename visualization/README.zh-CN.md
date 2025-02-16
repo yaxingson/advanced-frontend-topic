@@ -108,6 +108,8 @@
 - [snap.svg](https://github.com/adobe-webplatform/Snap.svg)
 - [pixjs](https://github.com/pixijs/pixijs)
 - [three.js](https://github.com/mrdoob/three.js/)
+- [spritejs](https://github.com/spritejs/spritejs)
+
 
 ## 应用场景
 
