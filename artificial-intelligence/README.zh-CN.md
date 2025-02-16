@@ -116,6 +116,8 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 - [xyflow](https://github.com/xyflow/xyflow)
 - [langchain](https://github.com/langchain-ai/langchain)
 - [@xenova/transformers]()
+- [@pinecone-database/pinecone](https://github.com/pinecone-io/pinecone-ts-client)
+
 
 ## 样例
 
