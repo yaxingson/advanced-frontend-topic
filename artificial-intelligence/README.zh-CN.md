@@ -58,6 +58,10 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 本质是深层的神经网络模型
 
 
+
+### 无监督学习
+
+
 #### 自然语言处理
 
 发展阶段:
@@ -110,13 +114,12 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 - <https://ollama.com/>
 - <https://dify.ai/>
 
-预训练:
+预训练（Pre-train）:
 
 - 词嵌入：数据压缩后的特征向量
 
 
-微调
-
+微调（Finetune）
 
 
 
@@ -171,6 +174,8 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 - [ollama](https://github.com/ollama/ollama)
 - [dify](https://github.com/langgenius/dify)
 - [scikit-learn](https://github.com/scikit-learn/scikit-learn)
+- [sora](https://github.com/hpcaitech/Open-Sora)
+- [StableVideo](https://github.com/rese1f/StableVideo)
 
 
 ## 样例
@@ -232,6 +237,7 @@ Prompt提示语技巧:
 
 ### 智能客服与机器人
 
+### 内容创作
 
 ## 资源
 
@@ -240,5 +246,14 @@ Prompt提示语技巧:
 <https://metaso.cn/>
 <https://siliconflow.cn/>
 <https://devv.ai/>
+<https://discord.com/>
+<https://app.runwayml.com>
+<https://pika.art/>
+<https://vivago.ai>
+<https://klingai.kuaishou.com/>
+<https://noisee.com.cn/#/>
+<https://jimeng.jianying.com/>
+
+
 
 
