@@ -55,6 +55,10 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 
 ### 深度学习
 
+### 自然语言处理
+
+### 计算机视觉
+
 ### 大语言模型
 
 > 大模型: 指拥有数十亿或数百亿个参数的大型预训练语言模型
@@ -90,7 +94,16 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 - <https://ollama.com/>
 - <https://dify.ai/>
 
-通用模型微调
+预训练:
+
+- 词嵌入：数据压缩后的特征向量
+
+
+微调
+
+
+
+
 
 
 ### 发展阶段
@@ -107,8 +120,8 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 
 - 推荐系统
 - 人脸识别
-- 文字识别）
-
+- 文字识别
+  
 生成式AI:
 
 - 文本生成
@@ -143,7 +156,7 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 - [@pinecone-database/pinecone](https://github.com/pinecone-io/pinecone-ts-client)
 - [ollama](https://github.com/ollama/ollama)
 - [dify](https://github.com/langgenius/dify)
-
+- [scikit-learn](https://github.com/scikit-learn/scikit-learn)
 
 
 ## 样例
@@ -203,10 +216,15 @@ Prompt提示语技巧:
 
 ### 数字虚拟人
 
+### 智能客服与机器人
+
+
 ## 资源
 
 <https://hugging-face.cn/>
 <https://www.langchain.com/langsmith>
 <https://metaso.cn/>
 <https://siliconflow.cn/>
+<https://devv.ai/>
+
 
