@@ -51,18 +51,23 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 
 ## 理论基础
 
+### 数学推导
+
 ### 机器学习
 
 #### 深度学习
 
 本质是深层的神经网络模型
 
+#### 无监督学习
 
+#### 监督学习
 
-### 无监督学习
+#### 半监督学习
 
+#### 强化学习
 
-#### 自然语言处理
+### 自然语言处理
 
 发展阶段:
 
@@ -76,6 +81,13 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 
 ### 计算机视觉
 
+卷积神级网络
+
+
+#### 物体检测
+
+
+#### 人脸识别
 
 
 ### 大语言模型
@@ -116,6 +128,7 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 预训练（Pre-train）:
 
 - 词嵌入：数据压缩后的特征向量
+- 向量存储
 
 
 微调（Finetune）
@@ -177,6 +190,9 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 - [scikit-learn](https://github.com/scikit-learn/scikit-learn)
 - [sora](https://github.com/hpcaitech/Open-Sora)
 - [StableVideo](https://github.com/rese1f/StableVideo)
+- [matplotlib](https://github.com/matplotlib/matplotlib)
+- [numpy](https://github.com/numpy/numpy)
+- [pandas](https://github.com/pandas-dev/pandas)
 
 
 ## 样例
@@ -242,19 +258,17 @@ Prompt提示语技巧:
 
 ## 资源
 
-<https://hugging-face.cn/>
-<https://www.langchain.com/langsmith>
-<https://metaso.cn/>
-<https://siliconflow.cn/>
-<https://devv.ai/>
-<https://discord.com/>
-<https://app.runwayml.com>
-<https://pika.art/>
-<https://vivago.ai>
-<https://klingai.kuaishou.com/>
-<https://noisee.com.cn/#/>
-<https://jimeng.jianying.com/>
-
-
+- <https://hugging-face.cn/>
+- <https://www.langchain.com/langsmith>
+- <https://metaso.cn/>
+- <https://siliconflow.cn/>
+- <https://devv.ai/>
+- <https://discord.com/>
+- <https://app.runwayml.com>
+- <https://pika.art/>
+- <https://vivago.ai>
+- <https://klingai.kuaishou.com/>
+- <https://noisee.com.cn/#/>
+- <https://jimeng.jianying.com/>
 
 
