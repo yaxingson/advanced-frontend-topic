@@ -78,7 +78,6 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 
 
 
-
 ### 大语言模型
 
 > 大模型: 指拥有数十亿或数百亿个参数的大型预训练语言模型
@@ -127,9 +126,11 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 
 ### 发展阶段
 
-1. Prompt
-2. Agent
-3. RAG
+#### Prompt
+
+#### Agent
+
+#### RAG
 
 ### AIGC
 
