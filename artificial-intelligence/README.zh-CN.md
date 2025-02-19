@@ -94,6 +94,8 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 
 > 大模型: 指拥有数十亿或数百亿个参数的大型预训练语言模型
 
+语言模型：一种用于计算词序列概率的统计模型，旨在评估特定词序列在语言中出现的可能性
+
 语言建模的发展: 
 
 1. 统计语言模型
@@ -101,7 +103,7 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 3. 预训练语言模型
 4. 大模型
 
-> Transformer架构
+> Transformer架构：编码器和解码器
 
 主流的大模型: [GPT-4]()、[BERT]()、[Gemini]()、[Llama]()、[Claude]()和[Deepseek]()
 
@@ -131,7 +133,11 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 - 向量存储
 
 
-微调（Finetune）
+微调（Finetune）：
+
+- 参数高效微调（Parameter-Efficient Fine-Tuning, PEFT）
+
+
 
 > 涌现：上下文学习（ICL）、指令微调和逐步推理（COT）
 
@@ -140,7 +146,6 @@ LLM应用开发范式:
 - `Copilot`
 - `Plugins`
 - `AutoGPT`
-
 
 
 ### 发展阶段
@@ -231,6 +236,8 @@ Prompt提示语技巧:
 - 思维链（COT）和思维树（TOT）
 - 外部工具
 - 输出提示
+- 自洽性 
+
 
 提示语框架: TASTE、ALIGN、RTGO和COSTAR
 
@@ -252,6 +259,8 @@ Prompt提示语技巧:
 <https://kimi.moonshot.cn/>
 
 > 乔哈里视窗
+
+Prompt安全防范
 
 
 ### 超级个体
