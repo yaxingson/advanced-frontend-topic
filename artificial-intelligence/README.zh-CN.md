@@ -133,6 +133,8 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 
 微调（Finetune）
 
+> 涌现：上下文学习（ICL）、指令微调和逐步推理（COT）
+
 
 
 
