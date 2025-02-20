@@ -121,7 +121,10 @@
 
 ### 游戏
 
-<https://observablehq.com/>
+### 地图可视化
 
-### 数据面板
+## 资源
+
+- <https://observablehq.com/>
+
 
