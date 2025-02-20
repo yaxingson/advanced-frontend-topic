@@ -8,8 +8,6 @@
 
 ### [低代码](./low-code/README.zh-CN.md)
 
+### [富文本编辑器](./editor/README.zh-CN.md)
+
 ### [多媒体开发](./multimedia-development/README.zh-CN.md)
-
-### [编辑器](./editor/README.zh-CN.md)
-
-### [云端IDE]()
