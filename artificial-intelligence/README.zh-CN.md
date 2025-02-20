@@ -133,7 +133,7 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 - 向量存储
 
 
-微调（Finetune）：
+微调（Fine-tuning）：
 
 - 参数高效微调（Parameter-Efficient Fine-Tuning, PEFT）
 
@@ -146,6 +146,15 @@ LLM应用开发范式:
 - `Copilot`
 - `Plugins`
 - `AutoGPT`
+
+LLM业务架构:
+
+- `Embedded模式`
+- `Copilot模式`
+- `Agents模式`
+
+AI智能体（AI Agent）：指具备自主决策和执行能力的智能系统，能够感知环境、分析信息并采取行动以实现特定目标
+
 
 
 ### 发展阶段
