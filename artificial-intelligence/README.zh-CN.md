@@ -105,6 +105,11 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 
 > Transformer架构：编码器和解码器
 
+多头自注意力机制
+
+《Attention Is All You Need》
+
+
 主流的大模型: [GPT-4]()、[BERT]()、[Gemini]()、[Llama]()、[Claude]()和[Deepseek]()
 
 大模型分类:
@@ -138,7 +143,6 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 - 参数高效微调（Parameter-Efficient Fine-Tuning, PEFT）
 
 
-
 > 涌现：上下文学习（ICL）、指令微调和逐步推理（COT）
 
 LLM应用开发范式:
@@ -155,6 +159,7 @@ LLM业务架构:
 
 AI智能体（AI Agent）：指具备自主决策和执行能力的智能系统，能够感知环境、分析信息并采取行动以实现特定目标
 
+> 价值观对齐
 
 
 ### 发展阶段
