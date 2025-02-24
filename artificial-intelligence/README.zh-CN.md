@@ -265,8 +265,11 @@ Prompt提示语技巧:
 - 零样本（Zero-shot）、单样本（One-shot）和少量样本（Few-shot）
 - 思维链（COT）和思维树（TOT）
 - 外部工具
-- 输出提示
-- 自洽性 
+- 格式化输出提示
+- 自洽性
+- 精确描述任务
+- 换行
+- 区分System/User Message
 
 
 提示语框架: TASTE、ALIGN、RTGO和COSTAR
