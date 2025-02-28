@@ -2,6 +2,21 @@ import os
 from openai import OpenAI
 from dotenv import load_dotenv
 
+def generate_prompt(*, role, user_msg, examples, output_msg):
+  example_str = '\n'.join(f'{example["input"]}\n{example["output"]}' for example in examples) 
+
+  template =  f'''
+  假设你是位{role}, 请帮助我解决以下问题。
+
+  {user_msg}
+
+  {example_str}
+
+  {output_msg}
+  '''
+
+  return template.strip()
+
 load_dotenv()
 
 model_settings = {
@@ -107,7 +122,6 @@ def main(model='qwen'):
   '''
 
 
-
   completion = client.chat.completions.create(
     model=settings['model'],
     messages=[
@@ -120,6 +134,25 @@ def main(model='qwen'):
 
   print(result)
 
-
 if __name__ == '__main__':
-  main('kimi')
+  # main('kimi')
+
+  print(generate_prompt(
+    role='AI专家',
+    user_msg='',
+    examples=[
+      {
+        'input':'',
+        'output':'' 
+      },
+      {
+        'input':'',
+        'output':'' 
+      },
+      {
+        'input':'',
+        'output':'' 
+      }
+    ],
+    output_msg=''
+  ))
