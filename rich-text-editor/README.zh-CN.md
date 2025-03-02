@@ -21,3 +21,10 @@
 - [editor.js](https://github.com/codex-team/editor.js)
 - [tiptap](https://github.com/ueberdosis/tiptap)
 - [slate](https://github.com/ianstormtaylor/slate)
+
+## 云端IDE
+
+- [Cloud Studio](https://cloud.tencent.com/product/cloudstudio)
+- [Cloud IDE]()
+- [GitHub Codespaces]()
+ 
