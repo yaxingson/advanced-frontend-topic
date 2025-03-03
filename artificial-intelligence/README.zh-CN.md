@@ -176,7 +176,7 @@ LLM应用开发范式:
 - `Plugins`
 - `AutoGPT`
 
-LLM业务架构:
+人和AI协同模式:
 
 - `Embedded模式`
 - `Copilot模式`

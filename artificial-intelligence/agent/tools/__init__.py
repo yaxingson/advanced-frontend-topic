@@ -12,7 +12,8 @@ tools_info = [
         'name':'',
         'type':'',
         'default':'',
-        'description':''
+        'description':'',
+        'required':True
       }
     ]
   },
