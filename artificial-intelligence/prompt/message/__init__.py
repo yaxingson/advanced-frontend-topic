@@ -4,7 +4,6 @@ class SystemMessage:
 class UserMessage:
   pass
 
-
-
-
+class AssistantMessage:
+  pass
 
