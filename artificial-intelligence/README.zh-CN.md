@@ -128,7 +128,7 @@ TensorFlow、PyTorch等开源框架的普及降低了AI开发的门槛，促进�
 《Attention Is All You Need》
 
 
-主流的大模型: [GPT-4]()、[BERT]()、[Gemini]()、[Llama]()、[Claude]()和[Deepseek]()
+主流的大模型: [GPT-4]()、[BERT]()、[T5]()、[Gemini]()、[Llama]()、[Claude]()和[Deepseek]()
 
 大模型分类:
 

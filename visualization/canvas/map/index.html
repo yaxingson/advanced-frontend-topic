@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Map Demos</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="map" style="width:100vw; height:100vh;"></div>
+
+
+  <script type="module">
+    import * as echarts from 'https://unpkg.com/echarts@5.6.0/dist/echarts.esm.js'
+    import genJson from './gen/china.json' assert { type:'json' }
+
+    const chart = echarts.init(document.getElementById('map'))
+
+    echarts.registerMap('china', genJson)
+
+    const option = {
+      tooltip: {
+        trigger: 'item',
+        formatter: '{b}: {c}'
+      },
+      visualMap: {
+        min: 0,
+        max: 1000,
+        left: 'left',
+        top: 'bottom',
+        text: ['高', '低'],
+        calculable: true,
+        inRange: {
+          color: ['#e0ffff', '#006edd']
+        }
+      },
+      series:[
+        {
+          name: '数据名称',
+          type: 'map',
+          map: 'china',
+          roam: true, 
+          label: {
+            show: true,
+            fontSize: 10
+          },
+          data: [
+            { name: '北京', value: 1000 },
+            { name: '上海', value: 800 },
+            { name: '广东', value: 700 },
+          ]
+        }
+      ]
+    }
+
+    chart.setOption(option)
+
+  </script>
+</body>
+</html>
