@@ -7,10 +7,12 @@ template = '''
 
 请使用以下格式回答:
 
+"""
+Thought {n}: {}
+Action {n} : {}
+Observe {n}: {}
 
-
-
-
+"""
 
 '''
 

@@ -5,6 +5,17 @@ from dotenv import load_dotenv
 load_dotenv()
 
 model_settings = {
+  'openai':{
+    'model':'gpt-4o-mini'
+  },
+  'llama':{
+    'base_url':'https://api.llama-api.com',
+    'model':'llama3.1-70b'
+  },
+  'claude':{
+    'base_url':'https://api.anthropic.com/v1',
+    'model':'claude-3-7-sonnet-20250219'
+  },
   'qwen':{
     'base_url':'https://dashscope.aliyuncs.com/compatible-mode/v1',
     'env_name':'DASHSCOPE_API_KEY',
