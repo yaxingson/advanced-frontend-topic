@@ -6,11 +6,33 @@
 
 ### Web APIs
 
+```js
+document.execCommand()
+
+```
+
 #### Selection和Range
 
 #### Clipboard API
 
 #### Input Events
+
+## 功能
+
+### 文本格式化
+
+### 节点
+
+### 重做/撤销
+
+### 协同编辑
+
+### 兼容性
+
+## 库
+
+
+
 
 ## 开源编辑器
 
