@@ -2,6 +2,7 @@
 
 ## 背景
 
+
 ## 实现技术
 
 ### CSS3
@@ -9,6 +10,20 @@
 ### HTML5 Video/Audio
 
 ### Web APIs
+
+> m3u8格式和WebVTT
+
+音频编解码器: 
+
+- AAC
+- MP3
+- OGG
+
+视频编解码器:
+
+- H.246
+- VP8
+- OGG
 
 ### WebRTC
 
@@ -26,3 +41,11 @@
 - [jimp](https://github.com/jimp-dev/jimp)
 
 ## 应用
+
+### 流媒体
+
+### 直播
+
+## 工具
+
+- <https://www.freeconvert.com/>
