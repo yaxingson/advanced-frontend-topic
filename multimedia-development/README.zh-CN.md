@@ -7,23 +7,108 @@
 
 ### CSS3
 
+```css
+video {
+  object-fit:cover;
+}
+
+```
+
 ### HTML5 Video/Audio
+
+#### Audio
+
+`audio`标签属性:
+
+- src
+- controls
+- autoplay
+
+
+`HTMLAudioElement`的属性、方法和事件:
+
+| 属性  | 描述 |
+| ---  | ---- |
+
+| 方法    | 描述  |
+| -----  | ----- |
+
+| 事件名称  |  描述  |
+| -----   | -----  |
+
+#### Video
+
+
+`video`标签属性:
+
+- src
+- width
+- height
+- controls
+- autoplay
+- loop
+- muted
+- poster
+- preload
+
+
+`HTMLVideoElement`的属性、方法和事件:
+
+| 属性  | 描述 |
+| ---  | ---- |
+| src   |
+| width |
+| height |
+| clientWidth |
+| clientHeight |
+| paused  |
+| muted   |
+| currentTime |
+| currentSrc  |
+| duration  |
+| playbackRate |
+| volume |
+
+| 方法    | 描述  |
+| -----  | ----- |
+| requestFullscreen | 
+| play  |
+| pause |
+| canPlayType |
+| addTextTrack |
+| load |
+
+
+| 事件名称  |  描述  |
+| -----   | -----  |
+| canplay |
+| ended   |
+| timeupdate |
+| pause |
+| play  |
+
 
 ### Web APIs
 
 > m3u8格式和WebVTT
 
+常见的视频容器文件格式: `.wav`、`.ogg`、`.aac`、`.mp3`和`.wma`
+
 音频编解码器: 
 
 - AAC
-- MP3
+- MPE-3
 - OGG
+- Vorbis
+
+常见的视频容器文件格式: `.flv`、`.avi`、`.ogg`、`.mp4`和`.webm`
 
 视频编解码器:
 
-- H.246
+- H.264
 - VP8
-- OGG
+- Theora
+
 
 ### WebRTC
 

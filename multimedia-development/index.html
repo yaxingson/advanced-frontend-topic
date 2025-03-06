@@ -11,7 +11,7 @@
   </style>
 </head>
 <body>
-  <audio controls>
+  <audio controls autoplay>
     <source src="./assets/audio/flow.mp3" type="audio/mpeg" />
     <!-- <source src="./assets/audio/flow.aac" type="audio/aac" /> -->
     <source src="./assets/audio/flow.ogg" type="audio/ogg" />
@@ -19,17 +19,22 @@
     抱歉，您的浏览器暂不支持audio元素。
   </audio>
   
-  <video controls>
+  <video controls autoplay>
     <source src="./assets/video/ocean.mp4" type="video/mp4" />
     <!-- <source src="./assets/video/ocean.avi" type="video/x-msvideo" /> -->
-    <!-- <source src="./assets/video/1.mp4" type="video/ogg" /> -->
-    <source src="./assets/video/ocean.webm" type="video/webm" />
+    <!-- <source src="./assets/video" type="video/ogg" /> -->
+     <!-- <source src="./assets/video/ocean.flv"> -->
+    <!-- <source src="./assets/video/ocean.webm" type="video/webm" /> -->
     抱歉，您的浏览器暂不支持video元素。
   </video>
 
-  <canvas width="600" height="320"></canvas>
+  <canvas width="600" height="320" hidden></canvas>
 
 
-  <script src="./main.js"></script>
+  <div id="container"></div>
+
+  
+
+  <script type="module" src="./main.js"></script>
 </body>
 </html>

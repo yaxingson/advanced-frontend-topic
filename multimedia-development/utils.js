@@ -5,3 +5,5 @@ export function isSupportType() {
   tag.canPlayType()
 
 }
+
+export function parseTime(second) {}

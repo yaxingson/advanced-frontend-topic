@@ -1,4 +1,5 @@
 "use strict"
+import { useVideoPlayer } from './useVideoPlayer.js'
 
 let isInit = false
 let isPlaying = false
@@ -25,6 +26,9 @@ function paint() {
 
 }
 
+videoEl.width = 700
+videoEl.poster = ''
+
 
 audioEl.addEventListener('play', ev=>{
   if(!isInit) {
@@ -50,6 +54,11 @@ audioEl.addEventListener('pause', ev=>{
 
 })
 
+videoEl.addEventListener('canplay', ev=>{})
+videoEl.addEventListener('ended', ev=>{})
+videoEl.addEventListener('timeupdate', ev=>{})
+
+
 document.addEventListener('keypress', ev=>{
   if(ev.key === ' ') {
     // alert(videoEl.buffered.start(0), videoEl.buffered.end(0))
@@ -63,16 +72,19 @@ document.addEventListener('keypress', ev=>{
     // alert(videoEl.volume)
     // alert(videoEl.canPlayType('video/mp4'))
 
+    videoEl.paused ? videoEl.play(): videoEl.pause()
 
-
-    // if(isPlaying) {
-    //   videoEl.pause()
-    //   isPlaying = false
-    // } else {
-    //   videoEl.play()
-    //   isPlaying = true
-    // }
   }
+})
+
+
+useVideoPlayer({
+  container:'#container',
+  src:'./assets/video/ocean.mp4',
+  width:700,
+  
+
 
 
 })
+
