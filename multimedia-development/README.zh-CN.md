@@ -68,6 +68,21 @@ video {
 | duration  |
 | playbackRate |
 | volume |
+| autoplay |
+| buffered |
+| controls |
+| crossOrigin |
+| defaultPlaybackRate |
+| defaultMuted |
+| loop |
+| error |
+| ended |
+| networkState |
+| played |
+| preload |
+| readyState |
+| seekable |
+| seeking |
 
 | 方法    | 描述  |
 | -----  | ----- |
@@ -86,7 +101,8 @@ video {
 | timeupdate |
 | pause |
 | play  |
-
+| abort |
+| suspend |
 
 ### Web APIs
 

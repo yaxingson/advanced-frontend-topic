@@ -23,6 +23,9 @@ export function useVideoPlayer(option) {
 
   videoEl.addEventListener('timeupdate', ev=>{})
 
+  videoEl.addEventListener('')
+
+
 
   containerEl.appendChild(videoEl)
 
