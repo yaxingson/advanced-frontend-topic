@@ -39,7 +39,7 @@ model_settings = {
   'deepseek': {
     'base_url':'https://api.deepseek.com',
     'env_name':'DEEPSEEK_API_KEY',
-    'model':'deepseek-chat'
+    'model':'deepseek-reasoner'
   }
 }
 

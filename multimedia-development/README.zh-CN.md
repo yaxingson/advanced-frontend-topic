@@ -2,6 +2,26 @@
 
 ## 背景
 
+## 前置知识
+
+> m3u8格式和WebVTT
+
+常见的视频容器文件格式: `.wav`、`.ogg`、`.aac`、`.mp3`和`.wma`
+
+音频编解码器: 
+
+- AAC
+- MPE-3
+- OGG
+- Vorbis
+
+常见的视频容器文件格式: `.flv`、`.avi`、`.ogg`、`.mp4`和`.webm`
+
+视频编解码器:
+
+- H.264
+- VP8
+- Theora
 
 ## 实现技术
 
@@ -106,24 +126,31 @@ video {
 
 ### Web APIs
 
-> m3u8格式和WebVTT
+- `window.AudioContext`
+- `window.FileReader`
+- `window.Uint8Array`
 
-常见的视频容器文件格式: `.wav`、`.ogg`、`.aac`、`.mp3`和`.wma`
+`AudioContext`对象的属性和方法:
 
-音频编解码器: 
+| 方法   | 描述  |
+| ----- | ----- |
+| createMediaElementSource |
+| createBufferSource |
+| createAnalyser |
+| decodeAudioData |
 
-- AAC
-- MPE-3
-- OGG
-- Vorbis
 
-常见的视频容器文件格式: `.flv`、`.avi`、`.ogg`、`.mp4`和`.webm`
+`AnalyserNode`对象的属性和方法:
 
-视频编解码器:
+| 属性 | 描述 |
+| -----  | ----- |
+| fftSize |
+| frequencyBinCount |
 
-- H.264
-- VP8
-- Theora
+| 方法  | 描述  |
+| ----- | ----- |
+| getByteFrequencyData |
+| getByteTimeDomainData |
 
 
 ### WebRTC
@@ -146,6 +173,8 @@ video {
 ### 流媒体
 
 ### 直播
+
+### 音频可视化
 
 ## 工具
 

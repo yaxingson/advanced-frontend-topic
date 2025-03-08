@@ -70,3 +70,8 @@ prompt注入
 
 模型偏见和价值观对齐
 
+提示库:
+
+- <https://api-docs.deepseek.com/zh-cn/prompt-library/>
+
+
