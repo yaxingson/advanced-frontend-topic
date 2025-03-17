@@ -6,6 +6,8 @@
 
 ## 实现原理
 
+![](./arch.png)
+
 ```mermaid
 flowchart 
     Agent --> 记忆

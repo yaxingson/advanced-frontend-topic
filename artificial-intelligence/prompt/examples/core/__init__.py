@@ -6,15 +6,18 @@ load_dotenv()
 
 model_settings = {
   'openai':{
-    'model':'gpt-4o-mini'
+    'model':'gpt-4o-mini',
+    'env_name':'OPENAI_API_KEY'
   },
   'llama':{
     'base_url':'https://api.llama-api.com',
-    'model':'llama3.1-70b'
+    'model':'llama3.1-70b',
+    'env_name':'LLAMA_API_KEY'
   },
   'claude':{
     'base_url':'https://api.anthropic.com/v1',
-    'model':'claude-3-7-sonnet-20250219'
+    'model':'claude-3-7-sonnet-20250219',
+    'env_name':''
   },
   'qwen':{
     'base_url':'https://dashscope.aliyuncs.com/compatible-mode/v1',
@@ -48,7 +51,7 @@ def question(prompt, model='qwen'):
 
   client = OpenAI(
     api_key=os.environ.get(settings['env_name']),
-    base_url=settings['base_url'],
+    base_url=settings.get('base_url', ''),
     default_headers={
       'appid':'app-EAzvJHg6'
     }
