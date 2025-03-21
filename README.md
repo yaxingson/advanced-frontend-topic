@@ -1,4 +1,4 @@
-# frontend-segment
+# Advanced Frontend Topic
 
 English &nbsp; | &nbsp; [Chinese](./README.zh-CN.md)
 

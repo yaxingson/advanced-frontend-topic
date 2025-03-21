@@ -1,6 +1,8 @@
 import os
 from openai import OpenAI
+from openai.types import ChatCompletionToolParam, FunctionParameters
 from dotenv import load_dotenv
+from collections import Iterable
 
 load_dotenv()
 
@@ -46,6 +48,28 @@ model_settings = {
   }
 }
 
+tools:Iterable[ChatCompletionToolParam] = [
+  {
+    "type":"function",
+    "function":{
+      "name":"get_weather",
+      "description":"",
+      "parameters":{
+        "lat": {
+          "type":"",
+          "description":""
+        },
+        "lon":{
+
+        }
+      },
+      "strict":{
+
+      }
+    }
+  }
+]
+
 def question(prompt, model='qwen'):
   settings = model_settings[model]
 
@@ -64,7 +88,8 @@ def question(prompt, model='qwen'):
     ],
     temperature=0.5,
     top_p=0.5,
-    stream=False
+    stream=False,
+    tools=tools,
   )
 
   result = completion.choices[0].message.content
