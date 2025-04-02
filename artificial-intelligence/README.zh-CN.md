@@ -178,9 +178,9 @@ LLM应用开发范式:
 
 人和AI协同模式:
 
-- `Embedded模式`
-- `Copilot模式`
-- `Agents模式`
+- `Embedded嵌入模式`
+- `Copilot副驾驶模式`
+- `Agents智能代理模式`
 
 AI智能体（AI Agent）：指具备自主决策和执行能力的智能系统，能够感知环境、分析信息并采取行动以实现特定目标
 

@@ -1,3 +1,5 @@
+from ..message import SystemMessage, UserMessage, AssistantMessage
+
 def template():
   prompt = '''
   {context}
@@ -22,3 +24,4 @@ def template():
 
     }
   )
+
