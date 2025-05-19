@@ -1,0 +1,35 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+
+  p {
+    font-size: 80px;
+    color: rgb(from red r g 255 / 0.1);
+  }
+
+</style>
+
+<p>Lorem ipsum</p>
+
+<select name="" id="">
+  <optgroup>
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+  </optgroup>
+  <hr>
+  <optgroup>
+    <option value="">4</option>
+    <option value="">5</option>
+  </optgroup>
+</select>
+
+<script>
+  setTimeout(()=>{
+    document.startViewTransition(()=>{
+      document.querySelector('.wrapper > div:nth-child(2)').remove()
+    })
+  }, 3000)
+
+  // navigator.wakeLock.request('screen')
+
+</script>

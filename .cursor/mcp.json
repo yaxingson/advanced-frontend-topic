@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "WebSearch-MCP": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@mnhlt/WebSearch-MCP",
+        "--key",
+        "f0dae044-7a00-4d9e-8554-ee1663a696b3",
+        "--profile",
+        "following-tortoise-OTOdzF"
+      ]
+    }
+  }
+}

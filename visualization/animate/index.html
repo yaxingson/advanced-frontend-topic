@@ -1,0 +1,194 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<style>
+  @keyframes fadeIn {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @keyframes slideIn {
+    0%   { transform: translateX(-150px);}
+    100% { transform: translateX(0);}
+  }
+
+  @keyframes zoomIn {
+    0%   { transform: scale(0);}
+    100% { transform: scale(1);}
+  }
+
+  @keyframes rotate {
+    0%   { transform: rotateZ(0);}
+    100% {transform: rotateZ(360deg);}
+  }
+
+  @keyframes bounce {
+    0%   { transform: translateY(0); }
+    20%  { transform: translateY(-30px); }
+    40%  { transform: translateY(0); }
+    60%  { transform: translateY(-15px); }
+    80%  { transform: translateY(0); }
+    100% { transform: translateY(-4px); }
+  }
+
+  .square {
+    width: 150px;
+    height: 150px;
+    background-color: tomato;
+  }
+
+  .square:hover {
+    animation-play-state: paused;
+  }
+
+  .nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+
+  .nav > li {
+    position: relative;
+    color: #fff;
+    padding: 8px 30px;
+    background-color: skyblue;
+  }
+
+  .nav > li:not(:last-child)::after {
+    position: absolute;
+    top:0;
+    right:-5px;
+    content:"";
+    width:12px;
+    height: 100%;
+    background-color: #fff;
+    transform: skewX(-30deg);
+    z-index: 1;
+  }
+
+  .text {
+    font-size: 30px;
+    animation: 1s bounce;
+  }
+
+  .text-stroke {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px blue;
+  }
+
+  .rounded {
+    border-radius: 150px 0 150px 0;
+  }
+
+  .box-shadow {
+    box-shadow: 1px 1px 5px 2px #929292 inset;
+  }
+
+  .text-shadow {
+    text-shadow: 1px 5px 5px #ff002b;
+  }
+
+  .gradient {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle at center center, pink, lightBlue);
+  }
+
+  body {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-perspective: 800px;
+    perspective: 800px;
+    -webkit-perspective-origin: center center;
+    perspective-origin: center center;
+  }
+
+  .demo {
+    position: relative;
+    padding: 150px 0;
+    width: 203px;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    background-color: #cccccc;
+    transition: all 1s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    margin: 100px;
+  }
+
+  .demo:hover {
+    transform: rotateY(180deg);
+  }
+
+  .demo::after {
+    position: absolute;
+    content: "";
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: #7a4ac9;
+    backface-visibility: hidden;
+    z-index: -1;
+  }
+  
+  @keyframes run {
+    0%   {background-image: url(../frame1.png);}
+    20%  {background-image: url(../frame2.png);}
+    40%  {background-image: url(../frame3.png);}
+    60%  {background-image: url(../frame4.png);}
+    80%  {background-image: url(../frame5.png);}
+    100% {background-image: url(../frame6.png);}
+  }
+
+  div {
+    width: 80px;
+    height: 80px;
+    margin: 8px 0;
+    transition-property:width;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+  }
+
+  body:active > div {
+    width: 800px;
+  }
+
+  div:nth-of-type(1) {
+    background-color: tomato;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);  
+  }
+  
+  div:nth-of-type(2) {
+    background-color: pink;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  div:nth-of-type(3) {
+    background-color: lightblue;
+    transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+  
+  div:nth-of-type(4) {
+    background-color: lightgreen;
+    transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  }
+
+  div:nth-of-type(5) {
+    background-color: lightseagreen;
+    transition-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  }
+
+  aside {
+    width: 500px;
+    height: 500px;
+    background-color: green;
+    filter: opacity(0.3);
+  }
+
+</style>
+
+<body>
+  <aside></aside>
+
+</body>

@@ -57,6 +57,8 @@
 
 ### 图形学
 
+> 贝塞尔曲线和二次曲线
+
 #### 色彩
 
 光学三原色： 红（R）、绿（G）和蓝（B）
@@ -86,6 +88,8 @@
 画布
 
 ### SVG
+
+> 可变色字体
 
 ### WebGL
 
@@ -117,7 +121,7 @@
 
 ### 报表和大屏
 
-### 数据分析
+### 数据面板
 
 ### 游戏
 
@@ -133,4 +137,10 @@ POI搜索
 
 - <https://observablehq.com/>
 
+字体创建工具:
+
+- [FontForge](https://fontforge.org/)
+- [Glyphs](https://glyphsapp.com/)
+- [RoboFont](https://robofont.com/)
+- [FontLab](https://www.fontlab.com/)
 

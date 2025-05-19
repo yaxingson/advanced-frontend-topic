@@ -1,0 +1,254 @@
+<style>
+  body {
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  canvas {
+    box-shadow: 1px 1px 6px 1px #dadada;
+  }
+</style>
+
+<body>
+  <canvas width="980" height="610">
+    Sorry, your current browser does not support the Canvas element.
+  </canvas>
+</body>
+
+<script>
+  function Point(x, y) {
+    return {x, y}
+  }
+
+  function LinearGradient(begin, end, colors) {
+    return {
+      begin,
+      end,
+      colors
+    }
+  }
+
+  function radians(degrees) {
+    return degrees * (Math.PI / 180)
+  }
+
+  class CanvasRenderer {
+    constructor(selector) {
+      /**@type {HTMLCanvasElement} */
+      this.canvas = document.querySelector(selector)
+      /**@type {CanvasRenderingContext2D}*/
+      this.ctx = this.canvas.getContext('2d')
+      this.ctx.globalAlpha = 1.0
+    }
+
+    normalizeStyle(value) {
+      if(typeof value === 'string') {
+        return value
+      }
+      
+      const { begin, end, colors } = value
+      const len = colors.length
+      const linearGradient = this.ctx.createLinearGradient(begin.x, begin.y, end.x, end.y)
+
+      for(let i = 0; i < len; i++) {
+        linearGradient.addColorStop((1/len)*i, colors[i])
+      }
+
+      return linearGradient
+    }
+
+    drawLine(begin, end, options={}) {
+      this.ctx.beginPath()
+      this.ctx.moveTo(begin.x, begin.y)
+      this.ctx.lineTo(end.x, end.y)
+      options.color && (this.ctx.strokeStyle = this.normalizeStyle(options.color))
+      options.lineWidth && (this.ctx.lineWidth = options.lineWidth)
+      options.lineCap && (this.ctx.lineCap = options.lineCap)
+      
+      this.ctx.stroke()
+    }
+
+    /**
+     * @typedef {{
+     *  lineCap:'butt'|'round'|'square',
+     *  lineJoin:'miter'|'bevel'|'round'
+     * }} Options
+     * @param {Options} options 
+     * 
+     */
+    drawPolyLine(points, options={}) {
+      this.ctx.moveTo(points[0].x, points[0].y)
+      points.slice(1).forEach(point=>{
+        this.ctx.lineTo(point.x, point.y)
+      })
+      options.color && (this.ctx.strokeStyle = this.normalizeStyle(options.color))
+      options.lineWidth && (this.ctx.lineWidth = options.lineWidth)
+      options.lineCap && (this.ctx.lineCap = options.lineCap)
+      options.lineJoin && (this.ctx.lineJoin = options.lineJoin)
+      this.ctx.stroke()
+    }
+
+    drawPolygon(points, options) {
+      this.ctx.moveTo(points[0].x, points[0].y)
+      points.slice(1).forEach(point => {
+        this.ctx.lineTo(point.x, point.y)
+      })
+      this.ctx.closePath()
+      options.fillColor && (this.ctx.fillStyle = this.normalizeStyle(options.fillColor))
+      this.ctx.fill()
+    }
+
+    /**
+     * @typedef {{translate:[number, number], rotate:number, scale:number}} Transform
+     * @typedef {{
+     *  transform:Transform
+     * }} Option
+     * 
+     * @param { Option } options
+     *
+     */ 
+    drawRect(pos, width, height, options={}) {
+      this.ctx.beginPath()
+      this.ctx.save()
+      options.fillColor && (this.ctx.fillStyle = options.fillColor)
+      options.shadowColor && (this.ctx.shadowColor = options.shadowColor)
+      options.shadowBlur && (this.ctx.shadowBlur = options.shadowBlur)
+      options.shadowOffsetX && (this.ctx.shadowOffsetX = options.shadowOffsetX)
+      options.shadowOffsetY && (this.ctx.shadowOffsetY = options.shadowOffsetY)
+      
+      if(options.transform?.rotate) {
+        this.ctx.translate(width/2+pos.x, height/2+pos.y)
+        this.ctx.rotate(options.transform.rotate)
+        this.ctx.fillRect(-width/2, -height/2, width, height)
+        this.ctx.restore()
+        return
+      }
+
+      if(options.transform?.scale) {
+        this.ctx.translate(width/2+pos.x, height/2+pos.y)
+        this.ctx.scale(options.transform.scale, options.transform.scale)
+        this.ctx.fillRect(-width/2, -height/2, width, height)
+        this.ctx.restore()
+        return
+      }
+
+      options.transform?.translate && (this.ctx.translate(...options.transform.translate))
+
+      if(options.animate?.x) {
+        let x = pos.x
+        const timer = setInterval(()=>{
+          if(x == options.animate?.x) clearInterval(timer)
+          this.erase(Point(0, 0), this.canvas.width, this.canvas.height)
+          this.ctx.beginPath()
+          this.ctx.rect(x++, pos.y, width, height)
+          this.ctx.fill()
+        }, 5)
+        return
+      }
+      
+      this.ctx.rect(pos.x, pos.y, width, height)
+      this.ctx.fill()
+    }
+
+    drawCircle(center, radius, options={}) {
+      const isStroke = !!options.isStroke
+
+      this.ctx.beginPath()
+      
+      options.color && (this.ctx.strokeStyle = this.normalizeStyle(options.color))
+      options.fillColor && (this.ctx.fillStyle = this.normalizeStyle(options.fillColor))
+      options.lineWidth && (this.ctx.lineWidth = options.lineWidth)
+
+      this.ctx.ellipse(center.x, center.y, radius, radius, 0, 0, Math.PI*2)
+      
+      if(isStroke) this.ctx.stroke()
+      else this.ctx.fill()
+    }
+
+    drawPie(center, radius, startAngle, endAngle, options={}) {
+      this.ctx.beginPath()
+      options.fillColor && (this.ctx.fillStyle = options.fillColor)
+      this.ctx.moveTo(center.x, center.y)
+      this.ctx.arc(center.x, center.y, radius, startAngle, endAngle)
+      this.ctx.fill()
+    }
+
+    erase(pos, width, height) {
+      this.ctx.clearRect(pos.x, pos.y, width, height)
+    }
+
+    /**
+     * @typedef {{
+     *  fontStyle:'normal'|'italic', 
+     *  isStroke:boolean, 
+     *  textAlign:'left'|'center'|'right',
+     *  textBaseline:'top'|'hanging'|'middle'|'alphabetic'|'bottom'|'ideographic',
+     *  textWrap:boolean
+     * }} Options
+     * @param {Options} options
+     *
+     */
+    setText(pos, text, options) {
+      const isStroke = !!options.isStroke
+      const fontSize = options.fontSize || 16
+      const fontFamily = options.fontFamily || '微软雅黑'
+      const fontWeight = options.fontWeight || 'normal'
+      const fontStyle = options.fontStyle || 'normal'
+      const textAlign = options.textAlign || 'left'
+      const textBaseline = options.textBaseline || 'alphabetic'
+      const textWrap = options.textWrap || false
+    
+      const { width } = this.ctx.measureText(text)
+      const maxWidth = this.canvas.width - pos.x
+      const lines = []
+
+      if(width > maxWidth) {
+        const numOfLines = Math.ceil(width/maxWidth)
+        const maxCharsOfLine = Math.floor(text.length/numOfLines)
+
+        let start = 0
+
+        for(let i = 0; i < numOfLines; i++) {
+          lines.push(text.slice(start, Math.min(start+=maxCharsOfLine, text.length)))
+        }
+      } else {
+        lines.push(text)
+      }
+    
+      this.ctx.font = `${fontWeight} ${fontStyle} ${fontSize}px ${fontFamily}`
+      this.ctx.textAlign = textAlign
+      this.ctx.textBaseline = textBaseline
+
+      if(isStroke) {
+        options.color && (this.ctx.strokeStyle = options.color)
+        this.ctx.strokeText(text, pos.x, pos.y)
+      } else {
+        options.color && (this.ctx.fillStyle = options.color)
+        lines.forEach((line, i)=>{
+          this.ctx.fillText(line, pos.x, pos.y*(i+1))
+        })
+      }
+    }
+
+    loadImage(pos, url) {
+      const img = new Image()
+      
+      img.src = url
+
+      img.onload = ()=>{
+        this.ctx.drawImage(img, pos.x, pos.y)
+      }
+    }
+  }
+
+  const renderer = new CanvasRenderer('canvas')
+  const url = 'https://tgi13.jia.com/120/580/20580927.l.jpg'
+
+  renderer.loadImage(Point(50, 50), url)
+
+ 
+
+
+</script>

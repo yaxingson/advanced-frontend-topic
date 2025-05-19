@@ -1,16 +1,177 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style.css">
-  <title>Map Demos</title>
-</head>
-<body>
-  <input type="text" placeholder="请输入地点" id="address">
-  <div id="container"></div>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  body {margin: 0;}
+  main {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  } 
+
+  #map {
+    width: 100%;
+    height: 100%;
+  }
+
+  .input-group {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 350px;
+    padding: 8px;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px grey;;
+  }
+
+  .form-check {
+    position: absolute;
+    bottom: 50px;
+    left:8px;
+    padding:8px 30px;
+    background-color: #fff;
+  }
+
+</style>
+
+<main>
+  <div id="map"></div>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="搜索关键词" id="keyword">
+    <button class="btn btn-outline-secondary" type="button">搜索</button>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="checkbox">
+    <label class="form-check-label" for="flexCheckDefault">
+      热力图
+    </label>
+  </div>
+</main>
+
+<script>
+  window._AMapSecurityConfig = {
+    securityJsCode: 'df924ea21d15ca6f046ad1de064a9773'
+  }
+</script>
+<script src="https://webapi.amap.com/maps?v=2.0&key=df30e7a64fa704ebbaaf05ee8c4760f1"></script>
+<script>
+  const searchInput = document.getElementById('keyword')
+  const checkbox = document.getElementById('checkbox')
+
+  const map = new AMap.Map('map', {
+    center:[117.219, 39.088],
+    zoom:16,
+    viewMode:'3D'
+  })
+
+  map.add(new AMap.Marker({
+    position: new AMap.LngLat(117.219, 39.088),
+    offset: new AMap.Pixel(0, 0),
+    icon:new AMap.Icon({
+      image: './marker.png',
+      size: new AMap.Size(35, 50),
+      imageSize: new AMap.Size(35, 50)
+    }),
+    title:'科技馆'
+  }))
+
+  new AMap.CircleMarker({
+    map,
+    center:  new AMap.LngLat(117.219, 39.088),
+    radius:30,
+    fillColor:'#00ff00ff'
+  }).setMap(map)
+
+  AMap.plugin(['AMap.InfoWindow', 'AMap.Geocoder'], ()=>{
+    const geocoder = new AMap.Geocoder({
+      city:'天津'
+    })
+
+    map.on('click', ({ lnglat })=>{
+      geocoder.getAddress(lnglat, (status, result)=>{
+        if(status === 'complete' && result.info === 'OK') {
+          const address = result.regeocode.formattedAddress
+          const infoWin = new AMap.InfoWindow({
+            content:`
+            <p>${address}</p>
+            <p>${lnglat.toString()}</p>
+            `
+          })  
+          infoWin.open(map, lnglat)
+        }
+      })
+    })
+  })
+
+  AMap.plugin(['AMap.Scale', 'AMap.MapType', 'AMap.ToolBar'], ()=>{
+    map.addControl(new AMap.Scale())
+    map.addControl(new AMap.MapType())
+    map.addControl(new AMap.ToolBar())
+  })
+
+  AMap.plugin(['AMap.PlaceSearch', 'AMap.AutoComplete'], ()=>{
+    const autoComplete = new AMap.AutoComplete({
+      input:'keyword',
+      city:'天津'
+    })
+
+    const placeSearch = new AMap.PlaceSearch({
+      map:map
+    })
+
+    autoComplete.on('select', e=>{
+      placeSearch.setCity(e.poi.adcode)
+      placeSearch.search(e.poi.name)
+      map.setZoom(18, true)
+    })
+
+    searchInput.addEventListener('change', e=>{
+      const keyword = e.target.value
+      keyword && placeSearch.search(keyword)
+    })
+  })
+
+  AMap.plugin('AMap.DistrictSearch', ()=>{
+    const districtSearch = new AMap.DistrictSearch({
+      subdistrict: 0,
+      extensions: 'all',
+      level: 'district'
+    })
+    
+    searchInput.addEventListener('change', e=>{
+      districtSearch.search(e.target.value, function(status, result) {
+        if (status === 'complete' && result.districtList.length > 0) {
+          const district = result.districtList[0]
+          // const center = district.center
+          // map.setCenter(center)
+          const bounds = district.boundaries
+
+          if (bounds) {
+            const polygons = []
+
+            for(let i = 0; i < bounds.length; i++) {
+              const polygon = new AMap.Polygon({
+                map: map,
+                strokeWeight: 1,
+                path: bounds[i],
+                fillOpacity: 0.2,
+                fillColor: '#80d8ff',
+                strokeColor: '#0091ea'
+              })
+              polygons.push(polygon)
+            }
+            map.add(polygons)
+            map.setFitView(polygons)
+          }
+        }
+      })
+    })
+  })
+
+  checkbox.addEventListener('change', e=>{
+    if(e.target.checked) {
+
+    }
+  })
 
 
-  <script type="module" src="./main.js"></script>
-</body>
-</html>
+</script>

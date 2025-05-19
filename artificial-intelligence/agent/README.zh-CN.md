@@ -41,8 +41,12 @@ flowchart
 - 行动和观察
   - 外部工具说明书
 
-Agent框架:
+```txt
+Let's think step by step.
 
+```
+
+Agent框架:
 - Plan and Execute
 - Self Ask
 - ReAct（结合推理和行动）
@@ -55,3 +59,8 @@ Agent框架:
 > MCP(Model Context Protocol，模型上下文协议):一种开放协议，旨在实现LLM应用与外部数据源、工具和服务之间的无缝集成
 
 工作流:为完成某项任务或业务流程而设计的一系列自动化步骤的有序组合
+
+MCP通信机制:
+
+- 标准输入输出（stdio）
+- 服务器推送事件（sse）
