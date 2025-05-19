@@ -331,4 +331,9 @@ Prompt安全防范
 - <https://noisee.com.cn/#/>
 - <https://jimeng.jianying.com/>
 
+### 模型提供商
+
+- <https://deepbricks.ai>
+
+
 
